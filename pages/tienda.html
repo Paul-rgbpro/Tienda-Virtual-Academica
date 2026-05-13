@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda — Ishop All</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a class="logo-link" href="../index.html">
+    <h1>Ishop All</h1>
+    <span class="tagline">Lo bueno está aquí</span>
+  </a>
+  <nav>
+    <a href="../pages/tienda.html">Tienda</a>
+    <a href="../pages/acerca.html">Acerca de</a>
+    <a href="../pages/faq.html">FAQ</a>
+    <a href="../pages/contacto.html">Contacto</a>
+  </nav>
+  <div class="header-spacer"></div>
+  <div class="social-links">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.pinterest.com" target="_blank" aria-label="Pinterest">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+    </a>
+  </div>
+  <button class="btn-login" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    Iniciar sesión
+  </button>
+  <button class="btn-cart" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    Carrito <span class="cart-count" style="display:none">0</span>
+  </button>
+  <button class="btn-menu" type="button" aria-label="Abrir menú">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay">
+  <nav class="mobile-nav">
+    <button class="close-nav">✕</button>
+    <a href="../index.html">Inicio</a>
+    <a href="../pages/tienda.html">Tienda</a>
+    <a href="../pages/acerca.html">Acerca de</a>
+    <a href="../pages/faq.html">FAQ</a>
+    <a href="../pages/contacto.html">Contacto</a>
+  </nav>
+</div>
+
+<section class="hero-promo">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <p class="breadcrumb">
+        <a href="../index.html">Inicio</a> / Tienda
+      </p>
+
+      <h1>MEGA OFERTAS<br>TECNOLÓGICAS</h1>
+
+      <p class="hero-sub">
+        Hasta 40% de descuento en consolas, smartphones y accesorios.
+      </p>
+
+      <a href="#product-grid" class="hero-btn">Ver ofertas</a>
+    </div>
+
+    <div class="banner-slider">
+      <img src="../img/banerofertas.png" alt="Promoción tecnología">
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TIENDA ══ -->
+<section class="page-section">
+
+  <!-- Toolbar: filtros + buscador + contador -->
+  <div class="tienda-toolbar">
+    <!-- Pills de categorías (generadas por JS desde productos.js) -->
+    <div id="filter-bar"></div>
+
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="search-wrap">
+        <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="search" placeholder="Buscar productos…">
+      </div>
+      <span id="result-count" class="result-count"></span>
+    </div>
+  </div>
+
+  <!-- Grid de productos (renderizado por JS) -->
+  <div id="product-grid" class="product-grid">
+    <div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--clr-text-muted)">Cargando productos…</div>
+  </div>
+
+</section>
+
+<!-- ══ BOTÓN ADMIN ══ -->
+<button id="admin-trigger" title="Agregar producto">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</button>
+
+<!-- ══ PANEL ADMIN ══ -->
+<div id="admin-overlay"></div>
+<aside id="admin-panel">
+  <div class="admin-header">
+    <h3>➕ Agregar producto</h3>
+    <button id="admin-close">✕</button>
+  </div>
+  <div class="admin-body">
+    <p class="admin-note">
+      Los productos que agregues aquí aparecen en la tienda de inmediato.<br>
+      Al guardar, obtendrás el código para pegarlo en <strong>productos.js</strong> y que sea permanente.
+    </p>
+    <form id="admin-form">
+      <div class="form-group">
+        <label for="admin-nombre">Nombre del producto *</label>
+        <input id="admin-nombre" name="nombre" type="text" placeholder="Ej: Samsung Galaxy S25" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="admin-precio">Precio (S/) *</label>
+          <input id="admin-precio" name="precio" type="number" min="1" placeholder="1999" required>
+        </div>
+        <div class="form-group">
+          <label for="admin-precio-original">Precio original (tachado)</label>
+          <input id="admin-precio-original" name="precioOriginal" type="number" min="1" placeholder="2499">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="admin-categoria">Categoría *</label>
+        <select id="admin-categoria" name="categoria" required>
+          <option value="">Selecciona una categoría…</option>
+          <!-- opciones generadas por JS -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="admin-imagen">URL de imagen</label>
+        <input id="admin-imagen" name="imagen" type="url" placeholder="https://… o ../img/foto.jpg">
+      </div>
+      <div class="form-group">
+        <label for="admin-badge">Badge (etiqueta)</label>
+        <input id="admin-badge" name="badge" type="text" placeholder="Nuevo, Oferta, Popular…">
+      </div>
+      <div class="form-group">
+        <label for="admin-desc">Descripción breve</label>
+        <textarea id="admin-desc" name="descripcion" placeholder="Características principales del producto…"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Guardar y agregar a la tienda</button>
+    </form>
+  </div>
+</aside>
+
+<!-- ══ CARRITO PANEL ══ -->
+<div class="cart-panel-overlay"></div>
+<aside class="cart-panel">
+  <div class="cart-panel-header">
+    <h3>Tu carrito</h3>
+    <button class="cart-panel-close">✕</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-panel-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong class="cart-total-value">S/ 0</strong>
+    </div>
+    <button class="btn-checkout">Proceder al pago</button>
+  </div>
+</aside>
+
+<!-- ══ MODAL LOGIN ══ -->
+<div class="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close">✕</button>
+    <h3>Iniciar sesión</h3>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">Correo electrónico</label>
+        <input id="login-email" type="email" placeholder="tu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Contraseña</label>
+        <input id="login-pass" type="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn-primary">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Ishop All</h3>
+      <p>Tu tienda tecnológica disponible las 24 horas, los 7 días de la semana.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="../pages/tienda.html">Tienda</a></li>
+        <li><a href="../pages/acerca.html">Acerca de</a></li>
+        <li><a href="../pages/faq.html">FAQ</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:917122199">📞 917-122-199</a></li>
+        <li><a href="mailto:ishopall@gmail.com">✉️ ishopall@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ishop All. Todos los derechos reservados.</span>
+    <span>Hecho con ♥ en Perú</span>
+  </div>
+</footer>
+
+<!-- productos.js PRIMERO, luego main.js -->
+<script src="../js/productos.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

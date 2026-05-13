@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — Ishop All</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a class="logo-link" href="../index.html">
+    <h1>Ishop All</h1>
+    <span class="tagline">Lo bueno está aquí</span>
+  </a>
+  <nav>
+    <a href="../pages/tienda.html">Tienda</a>
+    <a href="../pages/acerca.html">Acerca de</a>
+    <a href="../pages/faq.html">FAQ</a>
+    <a href="../pages/contacto.html">Contacto</a>
+  </nav>
+  <div class="header-spacer"></div>
+  <div class="social-links">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://www.pinterest.com" target="_blank" aria-label="Pinterest">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+    </a>
+  </div>
+  <button class="btn-login" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+    </svg>
+    Iniciar sesión
+  </button>
+  <button class="btn-cart" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+    </svg>
+    Carrito <span class="cart-count" style="display:none">0</span>
+  </button>
+  <button class="btn-menu" type="button" aria-label="Abrir menú">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+</header>
+
+<div class="mobile-nav-overlay">
+  <nav class="mobile-nav">
+    <button class="close-nav" aria-label="Cerrar">✕</button>
+    <a href="../index.html">Inicio</a>
+    <a href="../pages/tienda.html">Tienda</a>
+    <a href="../pages/acerca.html">Acerca de</a>
+    <a href="../pages/faq.html">FAQ</a>
+    <a href="../pages/contacto.html">Contacto</a>
+  </nav>
+</div>
+
+<!-- ══ PAGE HEADER ══ -->
+<div class="page-header">
+  <p class=".breadcrumb a"><a href="../index.html">Inicio</a> / FAQ</p>
+  <h2>Preguntas frecuentes</h2>
+  <p>Encuentra respuestas a las preguntas más comunes.</p>
+</div>
+
+<!-- ══ FAQ ══ -->
+<section class="page-section">
+  <div id="faq">
+    <h2>¿En qué podemos ayudarte?</h2>
+    <p>Si no encuentras lo que buscas, escríbenos a <a href="mailto:ishopall@gmail.com" style="color:var(--clr-accent)">ishopall@gmail.com</a></p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Qué métodos de pago aceptan?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Aceptamos tarjetas de crédito y débito (Visa, Mastercard), transferencias bancarias, Yape, Plin y pagos digitales. Todos los pagos son procesados de forma segura.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Realizan envíos a todo el país?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Sí, enviamos a todo el Perú. Los tiempos de entrega son de 24 a 72 horas hábiles según tu ubicación. Recibirás un código de seguimiento una vez despachado tu pedido.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Los productos tienen garantía?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Todos nuestros productos cuentan con garantía oficial del fabricante. El plazo varía según el producto y la marca, pero generalmente es de 12 meses.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Puedo devolver un producto?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Sí. Aceptamos devoluciones dentro de los 7 días calendario posteriores a la recepción del producto, siempre que esté en su estado original y con el empaque intacto. Contáctanos por correo o teléfono.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Cómo sé si mi pedido fue confirmado?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Recibirás un correo electrónico de confirmación inmediatamente después de realizar tu compra. Si no lo recibes, revisa tu carpeta de spam o contáctanos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          ¿Atienden los fines de semana?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Nuestro soporte está disponible de lunes a sábado de 9 am a 8 pm. Los pedidos se pueden realizar las 24 horas, pero son procesados en horario hábil.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CARRITO PANEL ══ -->
+<div class="cart-panel-overlay"></div>
+<aside class="cart-panel">
+  <div class="cart-panel-header">
+    <h3>Tu carrito</h3>
+    <button class="cart-panel-close" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-panel-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <strong class="cart-total-value">S/ 0</strong>
+    </div>
+    <button class="btn-checkout">Proceder al pago</button>
+  </div>
+</aside>
+
+<!-- ══ MODAL LOGIN ══ -->
+<div class="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Cerrar">✕</button>
+    <h3 id="modal-title">Iniciar sesión</h3>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">Correo electrónico</label>
+        <input id="login-email" type="email" placeholder="tu@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="login-pass">Contraseña</label>
+        <input id="login-pass" type="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn-primary">Entrar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Ishop All</h3>
+      <p>Tu tienda tecnológica disponible las 24 horas, los 7 días de la semana.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="../pages/tienda.html">Tienda</a></li>
+        <li><a href="../pages/acerca.html">Acerca de</a></li>
+        <li><a href="../pages/faq.html">FAQ</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:917122199">📞 917-122-199</a></li>
+        <li><a href="mailto:ishopall@gmail.com">✉️ ishopall@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ishop All. Todos los derechos reservados.</span>
+    <span>Hecho con ♥ en Perú</span>
+  </div>
+</footer>
+
+<script src="../js/productos.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
